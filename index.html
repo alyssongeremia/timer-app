@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer App - Mantenha o Foco</title>
+    <meta name="description" content="Aplicação estilo pomodoro">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="src/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <button id="toggle-mode">
+            <span class="sr-only">Ativar light mode</span>
+            <i class="ph ph-sun"></i>
+            <i class="ph ph-moon"></i>
+        </button>
+
+        <section id="today">
+            <span id="date-today">Domingo, 03 de Setembro</span>
+        </section>
+
+        <div class="timer-wrapper">
+            <h1>Tempo de Foco</h1>
+
+            <section id="timer">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" class="flex">
+                <button data-action="addMinutes" class="ph ph-plus"></button>
+                <button data-action="toggleRunning" class="ph ph-play"></button>
+                <button data-action="reset" class="ph ph-stop"></button>
+                <button data-action="removeMinutes" class="ph ph-minus"></button>
+            </section>
+        </div>
+
+        <section id="sounds" class="flex">
+            <button class="ph ph-airplane-tilt"></button>
+            <button class="ph ph-cloud-rain"></button>
+            <button class="ph ph-tree"></button>
+            <button class="ph ph-youtube-logo"></button>
+            <button class="ph ph-drop"></button>
+        </section>
+    </div>
+</body>
+</html>
